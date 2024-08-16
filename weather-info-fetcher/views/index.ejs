@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Info Fetcher</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>天気情報を取得</h1>
+        <form action="/getWeather" method="post">
+            <input type="text" name="city" placeholder="都市名を入力">
+            <button type="submit">天気を取得</button>
+        </form>
+        <% if (weather) { %>
+        <p><%= weather %></p>
+        <% } %>
+    </div>
+</body>
+</html>
